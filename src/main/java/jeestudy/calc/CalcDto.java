@@ -1,5 +1,4 @@
 package jeestudy.calc;
-
 public class CalcDto {
     private String firstNumber;
     private String secondNumber;
