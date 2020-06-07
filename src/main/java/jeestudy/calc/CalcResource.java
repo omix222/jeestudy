@@ -12,9 +12,8 @@ public class CalcResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public String add(CalcDto input) {
-        // TODO ぬるぽ
-        int result = Integer.getInteger(input.getFirstNumber()) +
-                Integer.getInteger(input.getSecondNumber());
+        int result = Integer.parseInt(input.getFirstNumber()) +
+                Integer.parseInt(input.getSecondNumber());
         return input.getFirstNumber()+" + "+
                 input.getSecondNumber()+" = " +
                 result;

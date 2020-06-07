@@ -1,4 +1,4 @@
-package jeestudy.ping.boundary;
+package jeestudy.ping;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
