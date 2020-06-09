@@ -8,6 +8,7 @@ import javax.ws.rs.core.MediaType;
 public class CalcResource {
     @Inject
     private CalcBean calcBean;
+
     @POST
     //@Consumesは、リソースが受け付ける MIME タイプを表す.
     //以下の設定だとJsonの形式で受付可能
@@ -22,11 +23,8 @@ public class CalcResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public CalcDto get(){
-        CalcDto result = new CalcDto();
-        result.setFirstNumber("111");
-        result.setSecondNumber("222");
-        return result;
+    public String getCount(){
+        return Integer.toString(calcBean.count());
     }
 
 }
