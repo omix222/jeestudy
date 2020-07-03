@@ -1,8 +1,12 @@
 # Generate project from..
+```
 mvn archetype:generate -DarchetypeGroupId=com.airhacks -DarchetypeArtifactId=jakartaee-essentials-archetype -DarchetypeVersion=0.0.3  -Darchetype.interactive=false --batch-mode -Dversion=1.0-SNAPSHOT -DgroupId=jeestudy -DartifactId=jeefirst
+```
 
 # Build
+```
 mvn clean package && docker build -t jeestudy/jeefirst .
+```
 
 # RUN
 
