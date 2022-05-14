@@ -1,17 +1,17 @@
 package jeestudy.ping;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
 
 /**
  *
  */
-@Path("ping")
+@Path("/ping")
 public class PingResource {
 
     @GET
     public String ping() {
-        return " Jakarta EE 8!";
+        return " Jakarta EE 9!";
     }
 
 }

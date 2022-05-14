@@ -1,7 +1,7 @@
 package jeestudy.calc;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.RequestScoped;
 
 //@RequestScoped
 @ApplicationScoped

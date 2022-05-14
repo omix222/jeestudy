@@ -1,10 +1,12 @@
 package jeestudy.calc;
 
-import javax.inject.Inject;
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
 
 @Path("calc")
+@RequestScoped
 public class CalcResource {
     @Inject
     private CalcBean calcBean;

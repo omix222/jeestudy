@@ -20,13 +20,15 @@ docker rm -f jeefirst || true && docker run -d -p 8080:8080 -p 4848:4848 --name 
 で直近のログを見ることが可能
 
 # First access URL
-http://localhost:8080/jeefirst/resources/ping
+http://localhost:8080/jeefirst/api/ping
 
 # Calc sample 
 ```
-curl -X POST -H "Content-Type: application/json" -d '{"firstNumber":"111","secondNumber":"222"}' localhost:8080/jeefirst/resources/calc
+curl -X POST -H "Content-Type: application/json" -d '{"firstNumber":"111","secondNumber":"222"}' localhost:8080/jeefirst/api/calc
 ```
 # Docker無しでビルド＆起動(UberJarとしてPayaraMicroを利用)
 ```
 mvn clean package payara-micro:start
 ```
+
+JakartaEE9に対応しているのはPayara6からだが、まだアルファ版しかでてないため、アルファ版を利用
