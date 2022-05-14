@@ -26,3 +26,7 @@ http://localhost:8080/jeefirst/resources/ping
 ```
 curl -X POST -H "Content-Type: application/json" -d '{"firstNumber":"111","secondNumber":"222"}' localhost:8080/jeefirst/resources/calc
 ```
+# Docker無しでビルド＆起動(UberJarとしてPayaraMicroを利用)
+```
+mvn clean package payara-micro:start
+```
