@@ -32,3 +32,7 @@ mvn clean package payara-micro:start
 ```
 
 JakartaEE9に対応しているのはPayara6からだが、まだアルファ版しかでてないため、アルファ版を利用
+
+# JSF画面
+
+http://localhost:8080/greeting.xhtml
