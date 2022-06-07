@@ -8,7 +8,9 @@ import jakarta.inject.Named;
 public class HelloBean {
 
     private String name;
-    private String greeting;
+    private String greeting ="default Hello!!";
+
+    private String[] sampleArray = {"hoge","var","foo"};
 
     public String getName() {
         return name;
@@ -25,4 +27,14 @@ public class HelloBean {
     public void doGreeting() {
         greeting = "Hello " + name;
     }
+
+
+    public String[] getSampleArray() {
+        return sampleArray;
+    }
+
+    public void setSampleArray(String[] sampleArray) {
+        this.sampleArray = sampleArray;
+    }
+
 }
