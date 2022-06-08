@@ -9,9 +9,11 @@
       <h:head>
           <title>Jakarta EE 9 - Greeting</title>
           <script type="text/javascript">
-              for (let step = 0; step &lt; 5; step++) {
+              //<![CDATA[
+              for (let step = 0; step < 5; step++) {
                   console.log('step');
               }
+
               console.log('<h:outputText value="#{helloBean.greeting}" />');
               let array = [];
 
@@ -25,7 +27,7 @@
               varStatusの１つ目の値のサンプル。制御情報っぽいものが入っている。
               IterationStatus{index=0, first=true, last=false, begin=null, end=null, step=null, even=true, current=null, iterationCount=0}
                */
-
+              //]]>
           </script>
       </h:head>
       <h:body>
