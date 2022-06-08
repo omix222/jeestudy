@@ -9,7 +9,11 @@
       <h:head>
           <title>Jakarta EE 9 - Greeting</title>
           <script type="text/javascript">
-
+              //<![CDATA[
+              for (let step = 0; step < 5; step++) {
+                  console.log('step');
+              }
+              //]]>
               console.log('<h:outputText value="#{helloBean.greeting}" />');
               let array = [];
 
@@ -31,6 +35,14 @@
           Name : <h:inputText value="#{helloBean.name}"/> <br/>
           <h:commandButton value="Greet" actionListener="#{helloBean.doGreeting()}" /> <br/>
       </h:form>
-      <h:outputText value="#{helloBean.greeting}" />
+          <div>
+            <h:outputText value="#{helloBean.greeting}" />
+          </div>
+          <div>
+              <ui:repeat value="#{helloBean.sampleArray}" var="item" varStatus="stat">
+                  <h:outputText value="#{item}" />
+              </ui:repeat>
+
+          </div>
     </h:body>
 </html>
