@@ -16,7 +16,7 @@
 
               console.log('<h:outputText value="#{helloBean.greeting}" />');
               let array = [];
-
+              //]]>
               <ui:repeat value="#{helloBean.sampleArray}" var="item" varStatus="stat">
                   console.log('<h:outputText value="#{item}" />');
                   array.push('<h:outputText value="#{item}" />');
@@ -27,7 +27,7 @@
               varStatusの１つ目の値のサンプル。制御情報っぽいものが入っている。
               IterationStatus{index=0, first=true, last=false, begin=null, end=null, step=null, even=true, current=null, iterationCount=0}
                */
-              //]]>
+
           </script>
       </h:head>
       <h:body>
