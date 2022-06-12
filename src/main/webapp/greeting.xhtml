@@ -9,6 +9,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
       <h:head>
           <title>Jakarta EE 9 - Greeting</title>
+          <script type="text/javascript" src="js/greeting.js"></script>
           <script type="text/javascript">
               //<![CDATA[
               for (let step = 0; step < 5; step++) {
@@ -43,6 +44,7 @@
           </div>
           <br/>
           <h:commandButton value="Greet" actionListener="#{helloBean.doGreeting()}" /> <br/>
+          <h:commandButton value="Click" type="button" onclick="click();exec();"/> <br/>
       </h:form>
           <div>
             <h:outputText value="#{helloBean.greeting}" />
@@ -58,5 +60,6 @@
                   <h:outputText value="#{item.myValue}" />
               </ui:repeat>
           </div>
+          <div id="output"></div>
     </h:body>
 </html>
