@@ -36,3 +36,6 @@ JakartaEE9に対応しているのはPayara6からだが、まだアルファ版
 # JSF画面
 
 http://localhost:8080/greeting.xhtml
+
+
+http://localhost:8080/modal.xhtml

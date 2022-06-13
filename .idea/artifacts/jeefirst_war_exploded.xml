@@ -16,6 +16,7 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.h2database:h2:2.1.212" />
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:7.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">
