@@ -76,6 +76,9 @@ public class HelloBean {
         greeting = "Hello " + name;
     }
 
+    public void doGreetingInModal() {
+        greeting = "Hello InModal:" + name;
+    }
 
     public String[] getSampleArray() {
         return sampleArray;

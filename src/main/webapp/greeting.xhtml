@@ -16,6 +16,7 @@
                   console.log('step');
               }
               //]]>
+
               console.log('<h:outputText value="#{helloBean.greeting}" />');
               let array = [];
 
@@ -54,12 +55,14 @@
               <h:outputText value="Resistance to PrimeFaces is futile!" />
               <br/>
               Name : <h:inputText value="#{helloBean.name}"/>
+              <h:commandButton value="Greet" actionListener="#{helloBean.doGreetingInModal()}" /> <br/>
           </p:dialog>
 
           <p:dialog header="Modal Dialog" widgetVar="dlg2" modal="true" height="100">
               <h:outputText value="This is a Modal Dialog." />
               <br/>
               Name : <h:inputText value="#{helloBean.name}"/>
+              <h:commandButton value="Greet" actionListener="#{helloBean.doGreetingInModal()}" /> <br/>
           </p:dialog>
 
           <h:commandButton value="Greet" actionListener="#{helloBean.doGreeting()}" /> <br/>
