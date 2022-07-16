@@ -7,35 +7,45 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
       <h:head>
           <title>Jakarta EE 9 - Greeting</title>
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
           <script type="text/javascript">
               //<![CDATA[
               for (let step = 0; step < 5; step++) {
                   console.log('step');
               }
               //]]>
-
               console.log('<h:outputText value="#{helloBean.greeting}" />');
               let array = [];
-
               <ui:repeat value="#{helloBean.sampleArray}" var="item" varStatus="stat">
                   console.log('<h:outputText value="#{item}" />');
                   array.push('<h:outputText value="#{item}" />');
               </ui:repeat>
-
               console.log(array);
               /*
               varStatusの１つ目の値のサンプル。制御情報っぽいものが入っている。
               IterationStatus{index=0, first=true, last=false, begin=null, end=null, step=null, even=true, current=null, iterationCount=0}
                */
-
           </script>
       </h:head>
       <h:body>
       <h:form>
           Name : <h:inputText value="#{helloBean.name}"/> <br/><br/>
+          Food :
+          <!--ui:repeat value="#{helloBean.selectItems}" var="_var">
+              <div class="form-check">
+                  <input class="form-check-input" type="checkbox"
+                         jsf:id="ids" jsf:value="#{helloBean.selectedIds[_var.myLabel]}"/>
+                  <label class="form-check-label" jsf:for="ids">#{_var.myValue}</label>
+              </div>
+          </ui:repeat-->
           <div>
               <h:selectManyListbox value="#{helloBean.sampleArray}" id="inputedList" >
                   <f:selectItems value="#{helloBean.myItems}"
@@ -43,30 +53,7 @@
                                  itemValue="#{item.myValue}" />
               </h:selectManyListbox>
           </div>
-          <br/>
-
-          <h:panelGrid columns="1" cellpadding="5">
-              <p:commandButton value="Basic" type="button" onclick="PF('dlg1').show();" />
-
-              <p:commandButton value="Modal" type="button" onclick="PF('dlg2').show();" />
-
-          </h:panelGrid>
-          <p:dialog header="Basic Dialog" widgetVar="dlg1" minHeight="40">
-              <h:outputText value="Resistance to PrimeFaces is futile!" />
-              <br/>
-              Name : <h:inputText value="#{helloBean.name}"/>
-              <h:commandButton value="Greet" actionListener="#{helloBean.doGreetingInModal()}" /> <br/>
-          </p:dialog>
-
-          <p:dialog header="Modal Dialog" widgetVar="dlg2" modal="true" height="100">
-              <h:outputText value="This is a Modal Dialog." />
-              <br/>
-              Name : <h:inputText value="#{helloBean.name}"/>
-              <h:commandButton value="Greet" actionListener="#{helloBean.doGreetingInModal()}" /> <br/>
-          </p:dialog>
-
           <h:commandButton value="Greet" actionListener="#{helloBean.doGreeting()}" /> <br/>
-          <h:commandButton value="Click" type="button" onclick="click();exec();"/> <br/>
       </h:form>
           <div>
             <h:outputText value="#{helloBean.greeting}" />
@@ -78,10 +65,9 @@
           </div> <br/> <br/>
           <div>
               <ui:repeat value="#{helloBean.myItems}" var="item" varStatus="stat">
-                  <h:outputText value="#{item.myLabel}" /> <br/>
-                  <h:outputText value="#{item.myValue}" />
+                  <h:outputText value="#{item.myLabel}" />
+                  <h:outputText value="#{item.myValue}" /><br/>
               </ui:repeat>
           </div>
-          <div id="output"></div><br/><br/>
       </h:body>
 </html>

@@ -1,19 +1,50 @@
 package jeestudy;
 
-import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.SessionScoped;
 import jakarta.inject.Named;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
-@RequestScoped
+@SessionScoped
 @Named
-public class HelloBean {
+public class HelloBean implements Serializable {
 
     private String name;
     private String greeting ="default Hello!!";
 
     private String[] sampleArray = {"hoge","var","foo"};
+
+    private List<MyItem> selectItems = Arrays.asList(new MyItem("Lavel1","Value1"),
+            new MyItem("Lavel2","Value2"));
+    private Map<Long, Boolean> selectedIds;
+
+    private List<MyItem>myItems = Arrays.asList(
+            new MyItem("アイテムA", "A"),
+            new MyItem("アイテムB", "B"),
+            new MyItem("アイテムC", "C"));
+
+    public List<MyItem> getSelectItems() {
+        return selectItems;
+    }
+
+    public void setSelectItems(List<MyItem> selectItems) {
+        this.selectItems = selectItems;
+    }
+
+    public void setGreeting(String greeting) {
+        this.greeting = greeting;
+    }
+
+    public Map<Long, Boolean> getSelectedIds() {
+        return selectedIds;
+    }
+
+    public void setSelectedIds(Map<Long, Boolean> selectedIds) {
+        this.selectedIds = selectedIds;
+    }
 
     public List<String> getListboxValues1() {
         return listboxValues1;
@@ -50,10 +81,7 @@ public class HelloBean {
         }
 
     }
-    private List<MyItem>myItems = Arrays.asList(
-            new MyItem("アイテムA", "A"),
-            new MyItem("アイテムB", "B"),
-            new MyItem("アイテムC", "C"));
+
     public List<MyItem> getMyItems() {
         return myItems;
     }
