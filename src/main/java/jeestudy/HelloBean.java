@@ -1,7 +1,10 @@
 package jeestudy;
 
 import jakarta.enterprise.context.SessionScoped;
+import jakarta.faces.context.ExternalContext;
+import jakarta.faces.context.FacesContext;
 import jakarta.inject.Named;
+import jakarta.servlet.http.HttpServletRequest;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -101,6 +104,10 @@ public class HelloBean implements Serializable {
     }
 
     public void doGreeting() {
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        ExternalContext externalContext = facesContext.getExternalContext();
+        HttpServletRequest request = (HttpServletRequest)externalContext.getRequest();
+        request.setAttribute("reqAttr","using requestScope");
         greeting = "Hello " + name;
     }
 
@@ -111,7 +118,6 @@ public class HelloBean implements Serializable {
     public String[] getSampleArray() {
         return sampleArray;
     }
-
     public void setSampleArray(String[] sampleArray) {
         this.sampleArray = sampleArray;
     }
