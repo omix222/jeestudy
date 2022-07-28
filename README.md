@@ -37,5 +37,10 @@ JakartaEE9に対応しているのはPayara6からだが、まだアルファ版
 
 http://localhost:8080/greeting.xhtml
 
+# 参考
+
+- JSF EL 2の紹介
+  - https://ja.getdocs.org/intro-to-jsf-expression-language
+
 
 http://localhost:8080/modal.xhtml
