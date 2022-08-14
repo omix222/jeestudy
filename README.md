@@ -26,6 +26,11 @@ http://localhost:8080/jeefirst/api/ping
 ```
 curl -X POST -H "Content-Type: application/json" -d '{"firstNumber":"111","secondNumber":"222"}' localhost:8080/jeefirst/api/calc
 ```
+# Javaバージョンの切り替え
+```
+sdk use java 11.0.5-amzn    
+```
+
 # Docker無しでビルド＆起動(UberJarとしてPayaraMicroを利用)
 ```
 mvn clean package payara-micro:start
