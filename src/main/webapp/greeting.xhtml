@@ -54,24 +54,37 @@
                                  itemValue="#{item.myValue}" />
               </h:selectManyListbox>
           </div>
+          <div>
+              <h:selectOneMenu value = "#{helloBean.oneData}">
+                  <f:selectItems value="#{helloBean.myItems}"
+                                 var="item" itemLabel="#{item.myLabel}"
+                                 itemValue="#{item.myValue}" />
+              </h:selectOneMenu>
+          </div>
           <h:commandButton value="Greet" actionListener="#{helloBean.doGreeting()}" /> <br/>
       </h:form>
           <div>
             <h:outputText value="#{helloBean.greeting}" />
           </div>
           <div>
+              selectManyListbox:
               <ui:repeat value="#{helloBean.sampleArray}" var="item" varStatus="stat">
                   <h:outputText value="#{item}" />
               </ui:repeat>
           </div> <br/> <br/>
           <div>
+              helloBean.myItems:<br/>
               <ui:repeat value="#{helloBean.myItems}" var="item" varStatus="stat">
                   <h:outputText value="#{item.myLabel}" />
                   <h:outputText value="#{item.myValue}" /><br/>
               </ui:repeat>
-          </div>
+          </div><br/>
           <div>
+              requestScope.reqAttr:
               <h:outputText value="#{requestScope.reqAttr}" />
+          </div><br/>
+          <div>
+              selectOneMenu:<h:outputText value="#{helloBean.oneData}" />
           </div>
       </h:body>
 </html>

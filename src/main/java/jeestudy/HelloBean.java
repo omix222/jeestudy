@@ -24,6 +24,8 @@ public class HelloBean implements Serializable {
             new MyItem("Lavel2","Value2"));
     private Map<Long, Boolean> selectedIds;
 
+    private String oneData;
+
     private List<MyItem>myItems = Arrays.asList(
             new MyItem("アイテムA", "A"),
             new MyItem("アイテムB", "B"),
@@ -121,5 +123,11 @@ public class HelloBean implements Serializable {
     public void setSampleArray(String[] sampleArray) {
         this.sampleArray = sampleArray;
     }
+    public String getOneData() {
+        return oneData;
+    }
 
+    public void setOneData(String oneData) {
+        this.oneData = oneData;
+    }
 }
