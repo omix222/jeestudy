@@ -1,5 +1,6 @@
 package jeestudy;
 
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
@@ -11,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-@SessionScoped
+@RequestScoped
 @Named
 public class HelloBean implements Serializable {
 
@@ -25,6 +26,10 @@ public class HelloBean implements Serializable {
     private Map<Long, Boolean> selectedIds;
 
     private String oneData;
+
+    private String radioValue1;
+
+    private String radioValue2;
 
     private List<MyItem>myItems = Arrays.asList(
             new MyItem("アイテムA", "A"),
@@ -129,5 +134,21 @@ public class HelloBean implements Serializable {
 
     public void setOneData(String oneData) {
         this.oneData = oneData;
+    }
+
+    public String getRadioValue1() {
+        return radioValue1;
+    }
+
+    public void setRadioValue1(String radioValue1) {
+        this.radioValue1 = radioValue1;
+    }
+
+    public String getRadioValue2() {
+        return radioValue2;
+    }
+
+    public void setRadioValue2(String radioValue2) {
+        this.radioValue2 = radioValue2;
     }
 }

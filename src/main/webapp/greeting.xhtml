@@ -61,6 +61,10 @@
                                  itemValue="#{item.myValue}" />
               </h:selectOneMenu>
           </div>
+          <input type="radio" p:name="radioname" jsf:value="#{helloBean.radioValue1}" value="radio1" jsf:id="radio1"/>
+          <label for="radio1">Radio1</label>
+          <input type="radio" p:name="radioname" jsf:value="#{helloBean.radioValue2}" value="radio2" jsf:id="radio2"/>
+          <label for="radio2">Radio2</label>
           <h:commandButton value="Greet" actionListener="#{helloBean.doGreeting()}" /> <br/>
       </h:form>
           <div>
@@ -85,6 +89,10 @@
           </div><br/>
           <div>
               selectOneMenu:<h:outputText value="#{helloBean.oneData}" />
+          </div><br/>
+          <div>
+              Radioボタン1:<h:outputText value="#{helloBean.radioValue1}" /><br/>
+              Radioボタン2:<h:outputText value="#{helloBean.radioValue2}" />
           </div>
       </h:body>
 </html>
