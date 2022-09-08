@@ -16,7 +16,7 @@
           <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
           <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+          <script type="text/javascript" src="js/greeting.js"/>
           <script type="text/javascript">
               //<![CDATA[
               for (let step = 0; step < 5; step++) {
@@ -37,7 +37,7 @@
           </script>
       </h:head>
       <h:body>
-      <h:form>
+      <h:form prependId="false">
           Name : <h:inputText value="#{helloBean.name}"/> <br/><br/>
           Food :
           <!--ui:repeat value="#{helloBean.selectItems}" var="_var">
@@ -61,12 +61,23 @@
                                  itemValue="#{item.myValue}" />
               </h:selectOneMenu>
           </div>
+            <div>
+                <h:selectOneRadio value = "#{helloBean.oneData}" id="radilId">
+                    <f:selectItems value="#{helloBean.myItems}"
+                                     var="item" itemLabel="#{item.myLabel}"
+                                     itemValue="#{item.myValue}" />
+                </h:selectOneRadio>
+          </div>
           <input type="radio" p:name="radioname" jsf:value="#{helloBean.radioValue1}" value="radio1" jsf:id="radio1"/>
           <label for="radio1">Radio1</label>
           <input type="radio" p:name="radioname" jsf:value="#{helloBean.radioValue2}" value="radio2" jsf:id="radio2"/>
           <label for="radio2">Radio2</label>
           <h:commandButton value="Greet" actionListener="#{helloBean.doGreeting()}" /> <br/>
       </h:form>
+          <h:commandLink value="Command Link" actionlistener="" onclick="alert('hohoge');return false;"/> <br/>
+          <h:commandLink value="call js no Arg" actionlistener="" onclick="click();return false;"/> <br/>
+          <h:commandLink value="call js one Arg" actionlistener="" onclick="clickArg('hohoge');return false;"/> <br/>
+          <h:commandLink value="call js two Arg" actionlistener="" onclick="clickArg2('hohoge','two');return false;"/> <br/>
           <div>
             <h:outputText value="#{helloBean.greeting}" />
           </div>
@@ -94,5 +105,6 @@
               Radioボタン1:<h:outputText value="#{helloBean.radioValue1}" /><br/>
               Radioボタン2:<h:outputText value="#{helloBean.radioValue2}" />
           </div>
+
       </h:body>
 </html>

@@ -1,3 +1,5 @@
+const singleMap = new Map();
+
 function click() {
     console.log("in greeting.js!!")
     let array = [];
@@ -7,9 +9,18 @@ function click() {
         array.push('<h:outputText value="#{item}" />');
     </ui:repeat>
     */
+    singleMap.set("key1", "value1");
     console.log(array);
 }
-
+function clickArg(arg) {
+    console.log("in greeting.js clickArg!!")
+    console.log(arg);
+}
+function clickArg2(arg1,arg2) {
+    console.log("in greeting.js clickArg!!")
+    console.log(arg1);
+    console.log(arg2);
+}
 function exec() {
     var elem = document.getElementById("output");
     var now = new Date();

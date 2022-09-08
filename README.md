@@ -42,6 +42,12 @@ JakartaEE9に対応しているのはPayara6からだが、まだアルファ版
 
 http://localhost:8080/greeting.xhtml
 
+# 段組テーブル検討
+参考
+https://ja.getdocs.org/jsf2-jsf-2-datatable-example
+
+http://localhost:8080/paging.xhtml
+
 # 参考
 
 - JSF EL 2の紹介

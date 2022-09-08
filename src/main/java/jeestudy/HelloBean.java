@@ -151,4 +151,6 @@ public class HelloBean implements Serializable {
     public void setRadioValue2(String radioValue2) {
         this.radioValue2 = radioValue2;
     }
+
+
 }
