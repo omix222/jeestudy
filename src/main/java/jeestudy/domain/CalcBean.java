@@ -1,9 +1,7 @@
-package jeestudy.calc;
+package jeestudy.domain;
 
 import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.enterprise.context.RequestScoped;
 
-//@RequestScoped
 @ApplicationScoped
 public class CalcBean {
     private int count;

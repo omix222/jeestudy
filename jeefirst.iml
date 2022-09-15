@@ -47,6 +47,12 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.8.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter:5.8.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-params:5.8.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.tngtech.archunit:archunit-junit5:0.14.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.tngtech.archunit:archunit-junit5-api:0.14.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.tngtech.archunit:archunit:0.14.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.tngtech.archunit:archunit-junit5-engine:0.14.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.tngtech.archunit:archunit-junit5-engine-api:0.14.1" level="project" />
     <orderEntry type="library" name="Maven: com.h2database:h2:2.1.212" level="project" />
     <orderEntry type="library" name="Maven: org.primefaces:primefaces:jakarta:11.0.0" level="project" />
   </component>

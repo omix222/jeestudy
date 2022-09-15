@@ -55,3 +55,6 @@ http://localhost:8080/paging.xhtml
 
 
 http://localhost:8080/modal.xhtml
+
+- ArchUnitの使い方
+- https://qiita.com/opengl-8080/items/0d0006918c2936c9986e
