@@ -10,7 +10,7 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.*;
 public class ArchUnitTest {
 
     @Test
-    void test() {
+    void パッケージ依存の確認() {
         JavaClasses javaClasses = new ClassFileImporter().importPackages("jeestudy");
 
         ArchRule rule = noClasses().that().resideInAPackage("..domain..")
