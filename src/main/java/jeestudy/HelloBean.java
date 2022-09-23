@@ -1,7 +1,6 @@
 package jeestudy;
 
 import jakarta.enterprise.context.RequestScoped;
-import jakarta.enterprise.context.SessionScoped;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
 import jakarta.inject.Named;
@@ -73,25 +72,19 @@ public class HelloBean implements Serializable {
             this.myLabel = myLabel;
             this.myValue = myValue;
         }
-
         public String getMyLabel() {
             return myLabel;
         }
-
         public void setMyLabel(String myLabel) {
             this.myLabel = myLabel;
         }
-
         public String getMyValue() {
             return myValue;
         }
-
         public void setMyValue(String myValue) {
             this.myValue = myValue;
         }
-
     }
-
     public List<MyItem> getMyItems() {
         return myItems;
     }
@@ -101,15 +94,12 @@ public class HelloBean implements Serializable {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public String getGreeting() {
         return greeting;
     }
-
     public void doGreeting() {
         FacesContext facesContext = FacesContext.getCurrentInstance();
         ExternalContext externalContext = facesContext.getExternalContext();
@@ -117,11 +107,9 @@ public class HelloBean implements Serializable {
         request.setAttribute("reqAttr","using requestScope");
         greeting = "Hello " + name;
     }
-
     public void doGreetingInModal() {
         greeting = "Hello InModal:" + name;
     }
-
     public String[] getSampleArray() {
         return sampleArray;
     }
