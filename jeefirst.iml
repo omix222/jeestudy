@@ -43,16 +43,18 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-commons:1.8.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apiguardian:apiguardian-api:1.1.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.slf4j:slf4j-api:2.0.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.slf4j:slf4j-reload4j:2.0.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: ch.qos.reload4j:reload4j:1.2.22" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.8.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.8.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter:5.8.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-params:5.8.2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.tngtech.archunit:archunit-junit5:0.14.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.tngtech.archunit:archunit-junit5-api:0.14.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.tngtech.archunit:archunit:0.14.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.tngtech.archunit:archunit-junit5-engine:0.14.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.tngtech.archunit:archunit-junit5-engine-api:0.14.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.tngtech.archunit:archunit-junit5:1.0.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.tngtech.archunit:archunit-junit5-api:1.0.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.tngtech.archunit:archunit:1.0.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.tngtech.archunit:archunit-junit5-engine:1.0.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.tngtech.archunit:archunit-junit5-engine-api:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: com.h2database:h2:2.1.212" level="project" />
     <orderEntry type="library" name="Maven: org.primefaces:primefaces:jakarta:11.0.0" level="project" />
   </component>
