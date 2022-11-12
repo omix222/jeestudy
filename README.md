@@ -37,14 +37,14 @@ sdk use java 11.0.5-amzn
 mvn clean package payara-micro:start
 ```
 
-JakartaEE9に対応しているのはPayara6からだが、まだアルファ版しかでてないため、アルファ版を利用
+JakartaEE9に対応しているのはPayara6を利用している。
 
 # JSF画面
 
 http://localhost:8080/greeting.xhtml
 
 # JSF画面（最小機能画面）
-http://localhost:8080/greeting2S.xhtml
+http://localhost:8080/greeting2.xhtml
 
 # 段組テーブル検討
 参考
