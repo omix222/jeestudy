@@ -11,7 +11,7 @@ public class PingResource {
 
     @GET
     public String ping() {
-        return " Jakarta EE 9!";
+        return " Jakarta EE 10!";
     }
 
 }

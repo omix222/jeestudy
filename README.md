@@ -20,7 +20,7 @@ docker rm -f jeefirst || true && docker run -d -p 8080:8080 -p 4848:4848 --name 
 で直近のログを見ることが可能
 
 # First access URL
-http://localhost:8080/jeefirst/api/ping
+http://localhost:8080/api/ping
 
 # Calc sample 
 ```

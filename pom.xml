@@ -11,7 +11,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
-        <jakartaee-api.version>9.1.0</jakartaee-api.version>
+        <jakartaee-api.version>10.0.0</jakartaee-api.version>
     </properties>
     <dependencies>
         <dependency>
